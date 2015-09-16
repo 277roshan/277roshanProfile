@@ -1,0 +1,20 @@
+{
+  "name": "polymer",
+  "version": "0.0.0",
+  "authors": [
+    "Roshan Thapaliya <roshan.thapaliya@bison.howard.edu>"
+  ],
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "core-elements": "Polymer/core-elements#~0.5.6",
+    "polymer": "Polymer/polymer#^0.5.5"
+  }
+}

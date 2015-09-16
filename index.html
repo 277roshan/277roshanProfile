@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- 1. Load platform support before any code that touches the DOM. -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
+    <!-- 2. Load the component using an HTML Import -->
+    <script
+  src="bower_components/webcomponentsjs/webcomponents.js">
+</script>
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+
+<link rel="import"
+  href="bower_components/core-toolbar/core-toolbar.html">
+<link rel="import"
+  href="bower_components/core-menu/core-menu.html">
+<link rel="import"
+  href="bower_components/core-item/core-item.html">
+<link rel="import"
+  href="bower_components/core-header-panel/core-header-panel.html">
+<link rel="import"
+  href="bower_components/core-drawer-panel/core-drawer-panel.html">
+<link rel="import"
+  href="bower_components/core-scaffold/core-scaffold.html">
+  <link rel="import"
+  href="bower_components/core-icon/core-icon.html">
+  </head>
+  <body>
+
+    <core-scaffold>
+
+  <core-header-panel navigation flex>
+    <core-toolbar id="navheader">
+      <span>Menu</span>
+    </core-toolbar>
+    <core-menu>
+      <core-item id ='1' label="My Home"></core-item>
+      <core-item id ='2' label="Biography"></core-item>
+      <core-item id ='3' label="Photos"></core-item>
+      <core-item id ='4' label="Projects"></core-item>
+      <core-item id ='5' label="Resume"></core-item>
+      <core-item id ='6' label="Famous Quotes"></core-item>
+      <core-item id ='7' label="Favorite Links"></core-item>
+      <core-item id ='8' label="Video"></core-item>
+      <a href="http://www.google.com">
+      <core-item id ='9' label="Exit to Google"></core-item>
+  	  </a>
+    </core-menu>
+  </core-header-panel>
+
+  <span tool>Roshan Thapaliya</span>
+
+
+  <div id = "content" class ="content1">
+  	My home is in Nepal.
+    <br>
+    <img src ="images/nepalmap.jpg" height='300' width='600'>
+    <img src ="images/flag_nepal.jpg" height='300' width='200'>
+    <p>
+      <h4>Geography</h4>
+A landlocked country the size of Arkansas, lying between India and the Tibetan Autonomous Region of China, Nepal contains Mount Everest (29,035 ft; 8,850 m), the tallest mountain in the world. Along its southern border, Nepal has a strip of level land that is partly forested, partly cultivated. North of that is the slope of the main section of the Himalayan range, including Everest and many other peaks higher than 8,000 m.
+
+<h4>Government</h4>
+In Nov. 1990, King Birendra promulgated a new constitution and introduced a multiparty parliamentary democracy in Nepal. Under pressure amid massive pro-democracy protests in April 2006, King Gyanendra gave up direct rule and reinstated Parliament, which then quickly moved to diminish the King's power. In Dec. 2007, Parliament voted to abolish the monarchy and become a federal democratic republic. The transition to a republic was completed in May 2008, when the Constituent Assemby voted to dissolve the monarchy.
+
+<h4>History</h4>
+The first civilizations in Nepal, which flourished around the 6th century B.C. , were confined to the fertile Kathmandu Valley where the present-day capital of the same name is located. It was in this region that Prince Siddhartha Gautama was born c. 563 B.C. Gautama achieved enlightenment as Buddha and spawned Buddhism.
+
+Nepali rulers' early patronage of Buddhism largely gave way to Hinduism, reflecting the increased influence of India, around the 12th century. Though the successive dynasties of the Gopalas, the Kiratis, and the Licchavis expanded their rule, it was not until the reign of the Malla kings from 1200–1769 that Nepal assumed the approximate dimensions of the modern state.
+
+The kingdom of Nepal was unified in 1768 by King Prithvi Narayan Shah, who had fled India following the Moghul conquests of the subcontinent. Under Shah and his successors, Nepal's borders expanded as far west as Kashmir and as far east as Sikkim (now part of India). A commercial treaty was signed with Britain in 1792 and again in 1816 after more than a year of hostilities with the British East India Company.
+
+<h4>The Independence of Nepal and the First Free Election</h4>
+In 1923, Britain recognized the absolute independence of Nepal. Between 1846 and 1951, the country was ruled by the Rana family, which always held the office of prime minister. In 1951, however, the king took over all power and proclaimed a constitutional monarchy. Mahendra Bir Bikram Shah became king in 1955. After Mahendra died of a heart attack in 1972, Prince Birendra, at 26, succeeded to the throne.
+
+In 1990, a pro-democracy movement forced King Birendra to lift the ban on political parties. The first free election in three decades provided a victory for the liberal Nepali Congress Party in 1991, although the Communists made a strong showing. A small but growing Maoist guerrilla movement, seeking to overthrow the constitutional monarchy and install a Communist government, began operating in the countryside in 1996.
+
+On June 1, 2001, King Birendra was shot and killed by his son, Crown Prince Dipendra. Angered by his family's disapproval of his choice of a bride, the crown prince also killed his mother and several other members of the royal family before shooting himself. Prince Gyanendra, the younger brother of King Birendra, was then crowned king.
+    </p>
+  </div>
+  <div id = "content" class ="content2">
+  	My biography
+    <br>
+    <img style="float:left; padding-right:20px;" src ="images/11.jpg" height='400' width='300'></td>
+    <p>asfasdf</p>
+  </div>
+  <div id = "content" class ="content3">
+  	My Photos.
+  	<br><br><br>
+  	<table style="width:100%">
+  <tr>
+    <td><img class='img1' src="images/1.jpg" alt="Smiley face" height="200" width="200"></td>
+    <td><img class ='img2' src="images/2.jpg" alt="Smiley face" height="200" width="200"></td>
+    <td><img class ='img3' src="images/3.jpg" alt="Smiley face" height="200" width="200"></td>
+    <td><img class ='img4' src="images/4.jpg" alt="Smiley face" height="200" width="200"></td>
+  </tr>
+  <tr>
+    <td><img class ='img5' src="images/5.jpg" alt="Smiley face" height="200" width="200"></td>
+    <th rowspan="2" colspan="2"><img id='main' src="images/1.jpg" alt="Smiley face" height="500" width="400"></th>
+    <td><img class ='img6' src="images/6.jpg" alt="Smiley face" height="200" width="200"></td>
+  </tr>
+  
+<tr>
+    <td><img class ='img7' src="images/7.jpg" alt="Smiley face" height="200" width="200"></td>
+    <td><img class ='img8' src="images/8.jpg" alt="Smiley face" height="200" width="200"></td>
+  </tr>
+<tr>
+    <td><img class ='img9' src="images/9.jpg" alt="Smiley face" height="200" width="200"></td>
+    <td><img class ='img10' src="images/10.jpg" alt="Smiley face" height="200" width="200"></td>
+    <td><img class ='img11' src="images/11.jpg" alt="Smiley face" height="200" width="200"></td>
+    <td><img class ='img12' src="images/12.jpg" alt="Smiley face" height="200" width="200"></td>
+
+  </tr>
+</table>
+
+  </div>
+  <div id = "content" class ="content4">
+  	My Projects.
+  </div>
+  <div id = "content" class ="content5">
+  <a href="RoshanResume.pdf">
+  	Download pdf of resume
+  </a>
+  <br>
+  <a href="RoshanresumeDuringEngineeringPracticum.docx">
+  	Download word document of resume
+  </a>
+  <br>
+  <img src="RoshanResume-page-001.jpg" alt="Smiley face" height="1200" width="900">
+  </div>
+  <div id = "content" class ="content6">
+  	Famous Quotes.
+  </div>
+  <div id = "content" class ="content7">
+  	Favorite Links
+  </div>
+  <div id = "content" class ="content8">
+  	Howard University Sings
+  	<br>
+  	<iframe width="700" height="400" src="https://www.youtube.com/embed/HCD4gBNOD28" frameborder="0" allowfullscreen></iframe>
+  </div>
+
+
+
+</core-scaffold>
+  </body>
+</html>
