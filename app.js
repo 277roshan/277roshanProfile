@@ -125,7 +125,15 @@ $(document).ready(function(){
         });
 
     });
+$(document).ready(function(){
+$(".myImg").hover(function(ev) {
+    console.log(1);
+    mySrc = $(ev.target).attr('src');
+    $(".to_show").attr('src',mySrc)
+ });
+ });
 
+/*
 $(document).ready(function(){
 $( "img.img1" ).hover(function() {
   $("#main").attr("src","images/1.jpg");
@@ -209,3 +217,4 @@ $( "img.img12" ).hover(function() {
   
 });
   });
+  */

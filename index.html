@@ -35,7 +35,7 @@
       <span>Menu</span>
     </core-toolbar>
     <core-menu>
-      <core-item id ='1' label="My Home"></core-item>
+      <core-item id ='1' label="Home"></core-item>
       <core-item id ='2' label="Biography"></core-item>
       <core-item id ='3' label="Photos"></core-item>
       <core-item id ='4' label="Projects"></core-item>
@@ -83,33 +83,36 @@ On June 1, 2001, King Birendra was shot and killed by his son, Crown Prince Dipe
   	<h3>My biography</h3>
     <br>
     <img style="float:left; padding-right:20px;" src ="images/11.jpg" height='400' width='300'></td>
-    <p>I am Roshan Thapaliya. I am Junior Computer Science major at Howard University. I am from Nepal.</p>
+    <p>I am Roshan Thapaliya. I am Junior Computer Science major at Howard University. I am from Nepal. I came to US two years ago for my undergraduate studies. I knew very little programming back then. The first programming language I learnt at the Howard University was Python. I like Python very much because it is simple syntactically and thus you can focus on solving problems. I like to use python to solve problems on Project Euler which is an online collection of mathematical problems that can be solved through programming. Besides python, I have also done C, C++, Javascript and Java. I knew HTML and CSS from high school.</p>
+    <p>
+    Talking about my hobbies, I like to read novels, play and watch soccer, and travel. Last summer I was in California. I loved the places in California very much. San Franscisco is the prettiest city ever. I would say the same about New York, but only during summer. Likewise I love Washington DC during the fall season when the leaves on trees turn into different hues.  
+    </p>
   </div>
   <div id = "content" class ="content3">
   	<h3>My Photos</h3>
   	<br><br><br>
   	<table style="width:100%">
   <tr>
-    <td><img class='img1' src="images/1.jpg" alt="Smiley face" height="200" width="200"></td>
-    <td><img class ='img2' src="images/2.jpg" alt="Smiley face" height="200" width="200"></td>
-    <td><img class ='img3' src="images/3.jpg" alt="Smiley face" height="200" width="200"></td>
-    <td><img class ='img4' src="images/4.jpg" alt="Smiley face" height="200" width="200"></td>
+    <td><img class='myImg' src="images/1.jpg" alt="Smiley face" height="200" width="200"></td>
+    <td><img class ='myImg' src="images/2.jpg" alt="Smiley face" height="200" width="200"></td>
+    <td><img class ='myImg' src="images/3.jpg" alt="Smiley face" height="200" width="200"></td>
+    <td><img class ='myImg' src="images/4.jpg" alt="Smiley face" height="200" width="200"></td>
   </tr>
   <tr>
-    <td><img class ='img5' src="images/5.jpg" alt="Smiley face" height="200" width="200"></td>
-    <th rowspan="2" colspan="2"><img id='main' src="images/1.jpg" alt="Smiley face" height="500" width="400"></th>
-    <td><img class ='img6' src="images/6.jpg" alt="Smiley face" height="200" width="200"></td>
+    <td><img class ='myImg' src="images/5.jpg" alt="Smiley face" height="200" width="200"></td>
+    <th rowspan="2" colspan="2"><img class='to_show' src="images/1.jpg" alt="Smiley face" height="500" width="400"></th>
+    <td><img class ='myImg' src="images/6.jpg" alt="Smiley face" height="200" width="200"></td>
   </tr>
   
 <tr>
-    <td><img class ='img7' src="images/7.jpg" alt="Smiley face" height="200" width="200"></td>
-    <td><img class ='img8' src="images/8.jpg" alt="Smiley face" height="200" width="200"></td>
+    <td><img class ='myImg' src="images/7.jpg" alt="Smiley face" height="200" width="200"></td>
+    <td><img class ='myImg' src="images/8.jpg" alt="Smiley face" height="200" width="200"></td>
   </tr>
 <tr>
-    <td><img class ='img9' src="images/9.jpg" alt="Smiley face" height="200" width="200"></td>
-    <td><img class ='img10' src="images/10.jpg" alt="Smiley face" height="200" width="200"></td>
-    <td><img class ='img11' src="images/11.jpg" alt="Smiley face" height="200" width="200"></td>
-    <td><img class ='img12' src="images/12.jpg" alt="Smiley face" height="200" width="200"></td>
+    <td><img class ='myImg' src="images/9.jpg" alt="Smiley face" height="200" width="200"></td>
+    <td><img class ='myImg' src="images/10.jpg" alt="Smiley face" height="200" width="200"></td>
+    <td><img class ='myImg' src="images/11.jpg" alt="Smiley face" height="200" width="200"></td>
+    <td><img class ='myImg' src="images/12.jpg" alt="Smiley face" height="200" width="200"></td>
 
   </tr>
 </table>
@@ -117,6 +120,47 @@ On June 1, 2001, King Birendra was shot and killed by his son, Crown Prince Dipe
   </div>
   <div id = "content" class ="content4">
   	<h3>My Projects</h3>
+    <h4>Personal Web Site:</h4>
+    I just completed making a personal website for Software Engineering class. I used HTML, CSS, JavaScript, JQuery and Google Polymer to construct the site. <br>
+    <img src="images/personal_site.png" height='400' width='600'> 
+    <h3> Shortest Path Algorithm: </h3>
+    I wrote a breadth first search algorithm in python to find shortest links between two wikipedia links. 
+    <pre>
+from BeautifulSoup import BeautifulSoup
+import urllib2
+import re
+
+_WIKIPEDIA = 'https://en.wikipedia.org'
+
+def get_wiki_page(link):
+    store = []
+    html_page = urllib2.urlopen(link)
+    soup = BeautifulSoup(html_page)
+    for link in soup.findAll('a'):
+        if bool(link.get('title')):
+            links = link.get('href')
+            if bool(links):
+                if bool(re.match('/wiki/',links)):
+                    store.append(links)
+    return store
+
+def bfs_path(start , end):
+    m = [[start]]
+    while True:
+        i = m.pop()
+        print i
+        for value in get_wiki_page(i[-1]):
+            check_end = _WIKIPEDIA + value
+            if check_end not in i:
+                if check_end == end:
+                    return i + [check_end]
+                m=([i+[check_end]]) + m
+    </pre>
+    <h3> Crowd Simulation</h3>
+    In my first summer I did a research on crowd simulation. I created an online simulation of a panicked crowd at a soccer match after a fire. I changed different factors and tested how that would affect the death rate in the simulation.
+    Here is the link to the project page.
+    <a href="http://roshan-udacity.appspot.com/">http://roshan-udacity.appspot.com/</a>
+
   </div>
   <div id = "content" class ="content5">
     <h3>Resume</h3>
@@ -162,23 +206,23 @@ On June 1, 2001, King Birendra was shot and killed by his son, Crown Prince Dipe
 
 
     <p>
-      https://www.youtube.com/<br>
+      <a href="https://www.youtube.com/">https://www.youtube.com/</a><br>
       I like to spend my free time watching videos on YouTube.
     </p>
     <p>
-    http://www.ronaldo7.net/<br>
+    <a href="http://www.ronaldo7.net/">http://www.ronaldo7.net/</a><br>
     I visit this link to watch live soccer games.
     </p>
     <p>
-      http://www.livescores.com/<br>
+       <a href="http://www.livescores.com/">http://www.livescores.com/</a><br>
     I visit this link to get live score updates for soccer games.
     </p>
     <p>
-      http://techcrunch.com/<br>
+      <a href="http://techcrunch.com/">http://techcrunch.com/</a><br>
       I visit this link to be updated with tech news.
     </p>
     <p>
-      https://projecteuler.net/<br>
+      <a href="https://projecteuler.net/">https://projecteuler.net/</a><br>
       I like to solve the coding problems on project euler using Python.
     </p>
 
@@ -193,4 +237,5 @@ On June 1, 2001, King Birendra was shot and killed by his son, Crown Prince Dipe
 
 </core-scaffold>
   </body>
+
 </html>
